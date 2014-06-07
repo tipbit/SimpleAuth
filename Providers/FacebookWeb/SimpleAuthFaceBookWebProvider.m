@@ -27,7 +27,7 @@
     SimpleAuthInterfaceHandler presentBlock = ^(UIViewController *controller) {
         UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:controller];
         navigation.modalPresentationStyle = UIModalPresentationFormSheet;
-        UIViewController *presented = [UIViewController SimpleAuth_presentedViewController];
+        UIViewController *presented = SimpleAuth.presentedViewController;
         [presented presentViewController:navigation animated:YES completion:nil];
     };
     

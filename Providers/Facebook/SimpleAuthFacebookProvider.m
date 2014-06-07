@@ -54,7 +54,8 @@
     NSDictionary *options = @{
         ACFacebookAppIdKey : self.options[@"app_id"],
         ACFacebookPermissionsKey : self.options[@"permissions"],
-        ACFacebookAudienceKey: self.options[@"audience"]
+        
+        ACFacebookAudienceKey: (self.options[@"audience"] ?: ACFacebookAudienceOnlyMe)
     };
     return [ACAccountStore SimpleAuth_accountsWithTypeIdentifier:ACAccountTypeIdentifierFacebook options:options];
 }

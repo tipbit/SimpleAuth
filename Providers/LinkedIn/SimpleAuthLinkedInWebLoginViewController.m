@@ -28,8 +28,9 @@
     NSDictionary *parameters = @{
         @"client_id" : self.options[@"client_id"],
         @"redirect_uri" : self.options[SimpleAuthRedirectURIKey],
+        @"scope" : self.options[@"scope"],
+        @"state" : [[NSUUID UUID] UUIDString],
         @"response_type" : @"code",
-        @"state" : [[NSProcessInfo processInfo] globallyUniqueString]
     };
     
     NSString *URLString = [NSString stringWithFormat:

@@ -27,7 +27,7 @@
     SimpleAuthInterfaceHandler presentBlock = ^(UIViewController *controller) {
         UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:controller];
         navigation.modalPresentationStyle = UIModalPresentationFormSheet;
-        UIViewController *presented = [UIViewController SimpleAuth_presentedViewController];
+        UIViewController *presented = SimpleAuth.presentedViewController;
         [presented presentViewController:navigation animated:YES completion:nil];
     };
     
@@ -65,8 +65,8 @@
 - (RACSignal *)authorizationCode {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            SimpleAuthLinkedInWebLoginViewController *login = [[SimpleAuthLinkedInWebLoginViewController alloc] initWithOptions:self.options];
-            login.completion = ^(UIViewController *login, NSURL *URL, NSError *error) {
+            SimpleAuthLinkedInWebLoginViewController *login0 = [[SimpleAuthLinkedInWebLoginViewController alloc] initWithOptions:self.options];
+            login0.completion = ^(UIViewController *login, NSURL *URL, NSError *error) {
                 SimpleAuthInterfaceHandler dismissBlock = self.options[SimpleAuthDismissInterfaceBlockKey];
                 dismissBlock(login);
                 
@@ -87,7 +87,7 @@
             };
             
             SimpleAuthInterfaceHandler block = self.options[SimpleAuthPresentInterfaceBlockKey];
-            block(login);
+            block(login0);
         });
         return nil;
     }];

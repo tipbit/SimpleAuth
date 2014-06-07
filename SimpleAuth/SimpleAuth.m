@@ -21,6 +21,7 @@ NSString * const SimpleAuthDismissInterfaceBlockKey = @"dismiss_interface_block"
 NSString * const SimpleAuthRedirectURIKey = @"redirect_uri";
 
 static SimpleAuthProvider *__currentProvider = nil;
+static UIWindow *__window;
 
 @implementation SimpleAuth
 
@@ -40,6 +41,27 @@ static SimpleAuthProvider *__currentProvider = nil;
         configuration = [NSMutableDictionary new];
     });
     return configuration;
+}
+
++ (UIWindow *)window
+{
+    if (__window)
+        return __window;
+    return [[[UIApplication sharedApplication] delegate] window];
+}
+
++ (void)setWindow:(UIWindow *)window
+{
+    __window = window;
+}
+
++ (UIViewController *)presentedViewController
+{
+    UIViewController *controller = self.window.rootViewController;
+    while (controller.presentedViewController) {
+        controller = controller.presentedViewController;
+    }
+    return controller;
 }
 
 
@@ -91,7 +113,9 @@ static SimpleAuthProvider *__currentProvider = nil;
         NSLog(@"[SimpleAuth] Warning: multiple attempts to register provider for type: %@", type);
         return;
     }
-    providers[type] = klass;
+    if (type) {
+        providers[type] = klass;
+    }
 }
 
 
