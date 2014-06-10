@@ -9,8 +9,6 @@
 #import "SimpleAuthMeetupProvider.h"
 #import "SimpleAuthMeetupLoginViewController.h"
 
-#import "UIViewController+SimpleAuthAdditions.h"
-
 @implementation SimpleAuthMeetupProvider
 
 #pragma mark - SimpleAuthProvider

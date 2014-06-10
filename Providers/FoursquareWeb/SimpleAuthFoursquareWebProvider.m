@@ -10,7 +10,6 @@
 #import "SimpleAuthFoursquareWebLoginViewController.h"
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "UIViewController+SimpleAuthAdditions.h"
 
 @implementation SimpleAuthFoursquareWebProvider
 

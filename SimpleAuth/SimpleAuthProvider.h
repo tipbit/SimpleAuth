@@ -8,7 +8,7 @@
 
 #import "SimpleAuth.h"
 
-#import <CMDQueryStringSerialization/CMDQueryStringSerialization.h>
+#import "CMDQueryStringSerialization.h"
 
 @interface SimpleAuthProvider : NSObject
 

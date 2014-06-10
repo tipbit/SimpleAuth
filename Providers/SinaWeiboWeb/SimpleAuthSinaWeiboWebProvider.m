@@ -10,7 +10,6 @@
 #import "SimpleAuthSinaWeiboWebLoginViewController.h"
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "UIViewController+SimpleAuthAdditions.h"
 
 @implementation SimpleAuthSinaWeiboWebProvider
 

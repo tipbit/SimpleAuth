@@ -9,9 +9,8 @@
 #import "SimpleAuthTwitterWebProvider.h"
 #import "SimpleAuthTwitterWebLoginViewController.h"
 
-#import "UIViewController+SimpleAuthAdditions.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import <cocoa-oauth/GCOAuth.h>
+#import "GCOAuth.h"
 
 @implementation SimpleAuthTwitterWebProvider
 
