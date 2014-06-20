@@ -95,6 +95,7 @@
 
 - (RACSignal *)accessTokenWithAuthorizationCode:(NSString *)code {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"");
         
         // Build request
         NSDictionary *parameters = @{
@@ -114,6 +115,7 @@
         // Run request
         [NSURLConnection sendAsynchronousRequest:request queue:self.operationQueue
          completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+             NSLog(@"");
              NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 99)];
              NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
              if ([indexSet containsIndex:statusCode] && data) {
@@ -143,28 +145,54 @@
     }];
 }
 
-
 - (RACSignal *)accountWithAccessToken:(NSDictionary *)accessToken {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSDictionary *parameters = @{
             @"oauth2_access_token" : accessToken[@"access_token"],
             @"format" : @"json"
         };
-        NSString *URLString =  [NSString stringWithFormat:
+        NSString *URLStringForProfile =  [NSString stringWithFormat:
                                 @"https://api.linkedin.com/v1/people/~?%@",
                                 [CMDQueryStringSerialization queryStringWithDictionary:parameters]];
-        NSURL *URL = [NSURL URLWithString:URLString];
-        NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-        [NSURLConnection sendAsynchronousRequest:request queue:self.operationQueue
+        NSURL *URLProfile = [NSURL URLWithString:URLStringForProfile];
+        
+        NSURLRequest *requestProfile = [NSURLRequest requestWithURL:URLProfile];
+        [NSURLConnection sendAsynchronousRequest:requestProfile queue:self.operationQueue
          completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+             NSLog(@"");
              NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 99)];
              NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
              if ([indexSet containsIndex:statusCode] && data) {
                  NSError *parseError = nil;
                  NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&parseError];
                  if (dictionary) {
-                     [subscriber sendNext:dictionary];
-                     [subscriber sendCompleted];
+                     
+                     //https://developer.linkedin.com/documents/profile-fields
+                     NSString *profileFields = @"id,email-address";
+                     
+                     NSString *URLStringForUserId =  [NSString stringWithFormat:
+                                                      @"https://api.linkedin.com/v1/people/~:(%@)?%@", profileFields,
+                                                      [CMDQueryStringSerialization queryStringWithDictionary:parameters]];
+                     NSURL *URLUserId = [NSURL URLWithString:URLStringForUserId];
+                     NSURLRequest *requestProfile = [NSURLRequest requestWithURL:URLUserId];
+                     [NSURLConnection sendAsynchronousRequest:requestProfile queue:self.operationQueue
+                                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                                                NSError *parseError = nil;
+                                                NSDictionary *userId = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&parseError];
+                                                if (!parseError && userId) {
+                                                    NSMutableDictionary *dict = [dictionary mutableCopy];
+                     
+                                                    NSLog(@"%@", userId);
+                                                    dict[@"userId"] = userId[@"id"];
+                                                    dict[@"emailAddress"] = userId[@"emailAddress"];
+                                                    dict[@"oauth2_access_token"] = accessToken[@"access_token"];
+                                                    [subscriber sendNext:dict];
+                                                    [subscriber sendCompleted];
+                                                }
+                                                else{
+                                                    [subscriber sendError:parseError];
+                                                }
+                                            }];
                  }
                  else {
                      [subscriber sendError:parseError];
@@ -180,6 +208,7 @@
 
 
 - (NSDictionary *)dictionaryWithAccount:(NSDictionary *)account accessToken:(NSDictionary *)accessToken {
+    NSLog(@"");
     NSMutableDictionary *dictionary = [NSMutableDictionary new];
     
     // Provider
@@ -190,11 +219,13 @@
     NSDate *expiresAtDate = [NSDate dateWithTimeIntervalSinceNow:expiresAtInterval];
     dictionary[@"credentials"] = @{
         @"token" : accessToken[@"access_token"],
-        @"expires_at" : expiresAtDate
+        @"expires_at" : expiresAtDate,
+        @"oauth2_access_token" : account[@"oauth2_access_token"]
     };
     
     // User ID
-    //dictionary[@"uid"] = account[@"id"];
+    dictionary[@"userId"] = account[@"userId"];
+    dictionary[@"emailAddress"] = account[@"emailAddress"];
     
     // Raw response
     dictionary[@"raw_info"] = account;
