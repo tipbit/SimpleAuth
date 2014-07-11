@@ -20,16 +20,12 @@
 		3B35369A1894C5710044EA0E /* ACAccountStore+SimpleAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3536991894C5710044EA0E /* ACAccountStore+SimpleAuth.m */; };
 		3B52BB911887088400C73329 /* SimpleAuthTwitterProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B52BB901887088400C73329 /* SimpleAuthTwitterProvider.m */; };
 		3B52BB9518871F6200C73329 /* SimpleAuthFacebookProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B52BB9418871F6200C73329 /* SimpleAuthFacebookProvider.m */; };
-		3B52BB9B188731A300C73329 /* SimpleAuthInstagramLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B52BB98188731A300C73329 /* SimpleAuthInstagramLoginViewController.m */; };
-		3B52BB9C188731A300C73329 /* SimpleAuthInstagramProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B52BB9A188731A300C73329 /* SimpleAuthInstagramProvider.m */; };
 		3B658435188892FE00D59100 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B658433188892FE00D59100 /* InfoPlist.strings */; };
 		3B658437188892FE00D59100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B658436188892FE00D59100 /* main.m */; };
 		3B65843B188892FE00D59100 /* SADAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B65843A188892FE00D59100 /* SADAppDelegate.m */; };
 		3B65843D188892FE00D59100 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B65843C188892FE00D59100 /* Images.xcassets */; };
 		3B6584581888931F00D59100 /* SADProviderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6584571888931F00D59100 /* SADProviderListViewController.m */; };
 		3B65845C188895E400D59100 /* libSimpleAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB32504182ABC8B00ACB555 /* libSimpleAuth.a */; };
-		3B6584601888A94200D59100 /* SimpleAuthTumblrProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B65845F1888A94200D59100 /* SimpleAuthTumblrProvider.m */; };
-		3B6584631888ABFB00D59100 /* SimpleAuthTumblrLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6584621888ABFB00D59100 /* SimpleAuthTumblrLoginViewController.m */; };
 		3B66656C18903F5400F3BF58 /* SimpleAuthFaceBookWebProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B66656B18903F5400F3BF58 /* SimpleAuthFaceBookWebProvider.m */; };
 		3B66656F18903F8400F3BF58 /* SimpleAuthFacebookWebLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B66656E18903F8400F3BF58 /* SimpleAuthFacebookWebLoginViewController.m */; };
 		3B8C408E188792A9007DC578 /* SimpleAuthTwitterWebProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C408D188792A9007DC578 /* SimpleAuthTwitterWebProvider.m */; };
@@ -40,14 +36,11 @@
 		3BC5FC701891D86A00523166 /* SimpleAuthDropboxWebProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5FC6F1891D86A00523166 /* SimpleAuthDropboxWebProvider.m */; };
 		3BC5FC731891D87B00523166 /* SimpleAuthDropboxWebLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5FC721891D87B00523166 /* SimpleAuthDropboxWebLoginViewController.m */; };
 		3C0A5393182C4217002C050C /* SimpleAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A5392182C4217002C050C /* SimpleAuthWebViewController.m */; };
-		4D149A411889B3DF0024639C /* SimpleAuthMeetupProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D149A401889B3DF0024639C /* SimpleAuthMeetupProvider.m */; };
 		4D149A441889B4390024639C /* SimpleAuthMeetupLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D149A431889B4390024639C /* SimpleAuthMeetupLoginViewController.m */; };
 		4DD68DF418B21A3C009B3767 /* SimpleAuthSinaWeiboWebProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD68DF318B21A3C009B3767 /* SimpleAuthSinaWeiboWebProvider.m */; };
 		4DD68DF718B21A55009B3767 /* SimpleAuthSinaWeiboWebLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD68DF618B21A55009B3767 /* SimpleAuthSinaWeiboWebLoginViewController.m */; };
 		81A50A491892649300D5D8AC /* SimpleAuthLinkedInWebProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A50A481892649300D5D8AC /* SimpleAuthLinkedInWebProvider.m */; };
 		81A50A4C189264C500D5D8AC /* SimpleAuthLinkedInWebLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A50A4B189264C500D5D8AC /* SimpleAuthLinkedInWebLoginViewController.m */; };
-		F9BE4F3E189139E900AE303A /* SimpleAuthFoursquareWebProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BE4F34189120DE00AE303A /* SimpleAuthFoursquareWebProvider.m */; };
-		F9BE4F3F189139F200AE303A /* SimpleAuthFoursquareWebLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BE4F3A1891308200AE303A /* SimpleAuthFoursquareWebLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -626,21 +619,15 @@
 				3BC5FC701891D86A00523166 /* SimpleAuthDropboxWebProvider.m in Sources */,
 				3B8C408E188792A9007DC578 /* SimpleAuthTwitterWebProvider.m in Sources */,
 				81A50A4C189264C500D5D8AC /* SimpleAuthLinkedInWebLoginViewController.m in Sources */,
-				F9BE4F3E189139E900AE303A /* SimpleAuthFoursquareWebProvider.m in Sources */,
-				4D149A411889B3DF0024639C /* SimpleAuthMeetupProvider.m in Sources */,
 				81A50A491892649300D5D8AC /* SimpleAuthLinkedInWebProvider.m in Sources */,
 				1832D1C11947621D00F3D79D /* CMDQueryStringSerialization.m in Sources */,
 				1832D1BE1947621D00F3D79D /* CMDQueryStringDateTransformer.m in Sources */,
 				3B8C409118879347007DC578 /* SimpleAuthTwitterWebLoginViewController.m in Sources */,
 				1832D1BD1947621D00F3D79D /* CMDQueryStringArrayTransformer.m in Sources */,
-				3B6584631888ABFB00D59100 /* SimpleAuthTumblrLoginViewController.m in Sources */,
 				3B52BB9518871F6200C73329 /* SimpleAuthFacebookProvider.m in Sources */,
 				3B9AB064182AC2710011FB9E /* SimpleAuthProvider.m in Sources */,
-				3B52BB9B188731A300C73329 /* SimpleAuthInstagramLoginViewController.m in Sources */,
-				F9BE4F3F189139F200AE303A /* SimpleAuthFoursquareWebLoginViewController.m in Sources */,
 				1832D1C41947621D00F3D79D /* CMDQueryStringWriter.m in Sources */,
 				3C0A5393182C4217002C050C /* SimpleAuthWebViewController.m in Sources */,
-				3B6584601888A94200D59100 /* SimpleAuthTumblrProvider.m in Sources */,
 				4D149A441889B4390024639C /* SimpleAuthMeetupLoginViewController.m in Sources */,
 				1832D1C01947621D00F3D79D /* CMDQueryStringReader.m in Sources */,
 				1832D1BF1947621D00F3D79D /* CMDQueryStringNumberTransformer.m in Sources */,
@@ -648,7 +635,6 @@
 				3B66656F18903F8400F3BF58 /* SimpleAuthFacebookWebLoginViewController.m in Sources */,
 				3BC5FC731891D87B00523166 /* SimpleAuthDropboxWebLoginViewController.m in Sources */,
 				3B52BB911887088400C73329 /* SimpleAuthTwitterProvider.m in Sources */,
-				3B52BB9C188731A300C73329 /* SimpleAuthInstagramProvider.m in Sources */,
 				1832D1C31947621D00F3D79D /* CMDQueryStringValueTransformer.m in Sources */,
 				1832D1C21947621D00F3D79D /* CMDQueryStringStringTransformer.m in Sources */,
 				3B66656C18903F5400F3BF58 /* SimpleAuthFaceBookWebProvider.m in Sources */,
