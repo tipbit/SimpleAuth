@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1832D1A91947620F00F3D79D /* GCOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832D1A71947620F00F3D79D /* GCOAuth.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1832D1A91947620F00F3D79D /* GCOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832D1A71947620F00F3D79D /* GCOAuth.m */; };
 		1832D1BD1947621D00F3D79D /* CMDQueryStringArrayTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832D1AC1947621D00F3D79D /* CMDQueryStringArrayTransformer.m */; };
 		1832D1BE1947621D00F3D79D /* CMDQueryStringDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832D1AE1947621D00F3D79D /* CMDQueryStringDateTransformer.m */; };
 		1832D1BF1947621D00F3D79D /* CMDQueryStringNumberTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832D1B01947621D00F3D79D /* CMDQueryStringNumberTransformer.m */; };
@@ -17,7 +17,6 @@
 		1832D1C31947621D00F3D79D /* CMDQueryStringValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832D1B81947621D00F3D79D /* CMDQueryStringValueTransformer.m */; };
 		1832D1C41947621D00F3D79D /* CMDQueryStringWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832D1BA1947621D00F3D79D /* CMDQueryStringWriter.m */; };
 		1832D1C51947621D00F3D79D /* NSString+CMDQueryStringSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832D1BC1947621D00F3D79D /* NSString+CMDQueryStringSerialization.m */; };
-		18C46C5D1947671200AEB722 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C46C5C1947671200AEB722 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B35369A1894C5710044EA0E /* ACAccountStore+SimpleAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3536991894C5710044EA0E /* ACAccountStore+SimpleAuth.m */; };
 		3B52BB911887088400C73329 /* SimpleAuthTwitterProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B52BB901887088400C73329 /* SimpleAuthTwitterProvider.m */; };
 		3B52BB9518871F6200C73329 /* SimpleAuthFacebookProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B52BB9418871F6200C73329 /* SimpleAuthFacebookProvider.m */; };
@@ -59,6 +58,34 @@
 			remoteGlobalIDString = 3BB32503182ABC8B00ACB555;
 			remoteInfo = SimpleAuth;
 		};
+		401584A1196F9C4F002541A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4015849A196F9C4F002541A4 /* Tidbits.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 408E88581768DEF6001B61E6;
+			remoteInfo = Tidbits;
+		};
+		401584A3196F9C4F002541A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4015849A196F9C4F002541A4 /* Tidbits.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4047B4A31805B42C0032BBA5;
+			remoteInfo = TidbitsTestBase;
+		};
+		401584A5196F9C4F002541A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4015849A196F9C4F002541A4 /* Tidbits.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 408E88691768DEF6001B61E6;
+			remoteInfo = TidbitsTests;
+		};
+		401584A7196F9C76002541A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4015849A196F9C4F002541A4 /* Tidbits.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 408E88571768DEF6001B61E6;
+			remoteInfo = Tidbits;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -85,8 +112,6 @@
 		1832D1BA1947621D00F3D79D /* CMDQueryStringWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDQueryStringWriter.m; sourceTree = "<group>"; };
 		1832D1BB1947621D00F3D79D /* NSString+CMDQueryStringSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CMDQueryStringSerialization.h"; sourceTree = "<group>"; };
 		1832D1BC1947621D00F3D79D /* NSString+CMDQueryStringSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CMDQueryStringSerialization.m"; sourceTree = "<group>"; };
-		18C46C5B1947671200AEB722 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		18C46C5C1947671200AEB722 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		3B3536981894C5710044EA0E /* ACAccountStore+SimpleAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ACAccountStore+SimpleAuth.h"; sourceTree = "<group>"; };
 		3B3536991894C5710044EA0E /* ACAccountStore+SimpleAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ACAccountStore+SimpleAuth.m"; sourceTree = "<group>"; };
 		3B52BB8F1887088400C73329 /* SimpleAuthTwitterProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAuthTwitterProvider.h; sourceTree = "<group>"; };
@@ -133,6 +158,7 @@
 		3BC5FC721891D87B00523166 /* SimpleAuthDropboxWebLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAuthDropboxWebLoginViewController.m; sourceTree = "<group>"; };
 		3C0A5391182C4217002C050C /* SimpleAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAuthWebViewController.h; sourceTree = "<group>"; };
 		3C0A5392182C4217002C050C /* SimpleAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAuthWebViewController.m; sourceTree = "<group>"; };
+		4015849A196F9C4F002541A4 /* Tidbits.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Tidbits.xcodeproj; path = ../tidbits/Tidbits.xcodeproj; sourceTree = "<group>"; };
 		4D149A3F1889B3DF0024639C /* SimpleAuthMeetupProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleAuthMeetupProvider.h; path = Meetup/SimpleAuthMeetupProvider.h; sourceTree = "<group>"; };
 		4D149A401889B3DF0024639C /* SimpleAuthMeetupProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleAuthMeetupProvider.m; path = Meetup/SimpleAuthMeetupProvider.m; sourceTree = "<group>"; };
 		4D149A421889B4390024639C /* SimpleAuthMeetupLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleAuthMeetupLoginViewController.h; path = Meetup/SimpleAuthMeetupLoginViewController.h; sourceTree = "<group>"; };
@@ -174,8 +200,6 @@
 		1832D1A51947620F00F3D79D /* cocoa-oauth */ = {
 			isa = PBXGroup;
 			children = (
-				18C46C5B1947671200AEB722 /* NSData+Base64.h */,
-				18C46C5C1947671200AEB722 /* NSData+Base64.m */,
 				1832D1A61947620F00F3D79D /* GCOAuth.h */,
 				1832D1A71947620F00F3D79D /* GCOAuth.m */,
 				1832D1A81947620F00F3D79D /* README.md */,
@@ -345,6 +369,7 @@
 		3BB324FB182ABC8B00ACB555 = {
 			isa = PBXGroup;
 			children = (
+				4015849A196F9C4F002541A4 /* Tidbits.xcodeproj */,
 				1832D1AA1947621D00F3D79D /* CMDQueryStringSerialization */,
 				1832D1A51947620F00F3D79D /* cocoa-oauth */,
 				3BB32509182ABC8B00ACB555 /* SimpleAuth */,
@@ -415,6 +440,16 @@
 				3B3536991894C5710044EA0E /* ACAccountStore+SimpleAuth.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		4015849B196F9C4F002541A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				401584A2196F9C4F002541A4 /* libTidbits.a */,
+				401584A4196F9C4F002541A4 /* libTidbitsTestBase.a */,
+				401584A6196F9C4F002541A4 /* TidbitsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		4D149A3E1889B38C0024639C /* Meetup */ = {
@@ -495,6 +530,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				401584A8196F9C76002541A4 /* PBXTargetDependency */,
 			);
 			name = SimpleAuth;
 			productName = SimpleAuth;
@@ -520,6 +556,12 @@
 			mainGroup = 3BB324FB182ABC8B00ACB555;
 			productRefGroup = 3BB32505182ABC8B00ACB555 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4015849B196F9C4F002541A4 /* Products */;
+					ProjectRef = 4015849A196F9C4F002541A4 /* Tidbits.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3BB32503182ABC8B00ACB555 /* SimpleAuth */,
@@ -527,6 +569,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		401584A2196F9C4F002541A4 /* libTidbits.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTidbits.a;
+			remoteRef = 401584A1196F9C4F002541A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		401584A4196F9C4F002541A4 /* libTidbitsTestBase.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTidbitsTestBase.a;
+			remoteRef = 401584A3196F9C4F002541A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		401584A6196F9C4F002541A4 /* TidbitsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TidbitsTests.xctest;
+			remoteRef = 401584A5196F9C4F002541A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3B658427188892FD00D59100 /* Resources */ = {
@@ -578,7 +644,6 @@
 				4D149A441889B4390024639C /* SimpleAuthMeetupLoginViewController.m in Sources */,
 				1832D1C01947621D00F3D79D /* CMDQueryStringReader.m in Sources */,
 				1832D1BF1947621D00F3D79D /* CMDQueryStringNumberTransformer.m in Sources */,
-				18C46C5D1947671200AEB722 /* NSData+Base64.m in Sources */,
 				1832D1A91947620F00F3D79D /* GCOAuth.m in Sources */,
 				3B66656F18903F8400F3BF58 /* SimpleAuthFacebookWebLoginViewController.m in Sources */,
 				3BC5FC731891D87B00523166 /* SimpleAuthDropboxWebLoginViewController.m in Sources */,
@@ -601,6 +666,11 @@
 			isa = PBXTargetDependency;
 			target = 3BB32503182ABC8B00ACB555 /* SimpleAuth */;
 			targetProxy = 3B65845A1888947500D59100 /* PBXContainerItemProxy */;
+		};
+		401584A8196F9C76002541A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Tidbits;
+			targetProxy = 401584A7196F9C76002541A4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -696,6 +766,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../tidbits/**";
 			};
 			name = Debug;
 		};
@@ -732,6 +803,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../tidbits/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
