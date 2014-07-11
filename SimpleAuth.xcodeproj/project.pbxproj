@@ -79,6 +79,27 @@
 			remoteGlobalIDString = 408E88571768DEF6001B61E6;
 			remoteInfo = Tidbits;
 		};
+		4015852619707DD6002541A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4015851219707C30002541A4 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88037F8315056328001A5B19;
+			remoteInfo = ReactiveCocoa;
+		};
+		4015852819707DD6002541A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4015851219707C30002541A4 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88F440AB153DAC820097B4C3;
+			remoteInfo = "ReactiveCocoa-iOS";
+		};
+		4015852D19707DE1002541A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4015851219707C30002541A4 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 88F440AA153DAC820097B4C3;
+			remoteInfo = "ReactiveCocoa-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +173,7 @@
 		3C0A5391182C4217002C050C /* SimpleAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAuthWebViewController.h; sourceTree = "<group>"; };
 		3C0A5392182C4217002C050C /* SimpleAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAuthWebViewController.m; sourceTree = "<group>"; };
 		4015849A196F9C4F002541A4 /* Tidbits.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Tidbits.xcodeproj; path = ../tidbits/Tidbits.xcodeproj; sourceTree = "<group>"; };
+		4015851219707C30002541A4 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = ../ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		4D149A3F1889B3DF0024639C /* SimpleAuthMeetupProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleAuthMeetupProvider.h; path = Meetup/SimpleAuthMeetupProvider.h; sourceTree = "<group>"; };
 		4D149A401889B3DF0024639C /* SimpleAuthMeetupProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleAuthMeetupProvider.m; path = Meetup/SimpleAuthMeetupProvider.m; sourceTree = "<group>"; };
 		4D149A421889B4390024639C /* SimpleAuthMeetupLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleAuthMeetupLoginViewController.h; path = Meetup/SimpleAuthMeetupLoginViewController.h; sourceTree = "<group>"; };
@@ -362,6 +384,7 @@
 		3BB324FB182ABC8B00ACB555 = {
 			isa = PBXGroup;
 			children = (
+				4015851219707C30002541A4 /* ReactiveCocoa.xcodeproj */,
 				4015849A196F9C4F002541A4 /* Tidbits.xcodeproj */,
 				1832D1AA1947621D00F3D79D /* CMDQueryStringSerialization */,
 				1832D1A51947620F00F3D79D /* cocoa-oauth */,
@@ -445,6 +468,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		4015852219707DD6002541A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4015852719707DD6002541A4 /* ReactiveCocoa.framework */,
+				4015852919707DD6002541A4 /* libReactiveCocoa-iOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4D149A3E1889B38C0024639C /* Meetup */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +555,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4015852E19707DE1002541A4 /* PBXTargetDependency */,
 				401584A8196F9C76002541A4 /* PBXTargetDependency */,
 			);
 			name = SimpleAuth;
@@ -550,6 +583,10 @@
 			productRefGroup = 3BB32505182ABC8B00ACB555 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 4015852219707DD6002541A4 /* Products */;
+					ProjectRef = 4015851219707C30002541A4 /* ReactiveCocoa.xcodeproj */;
+				},
 				{
 					ProductGroup = 4015849B196F9C4F002541A4 /* Products */;
 					ProjectRef = 4015849A196F9C4F002541A4 /* Tidbits.xcodeproj */;
@@ -583,6 +620,20 @@
 			fileType = wrapper.cfbundle;
 			path = TidbitsTests.xctest;
 			remoteRef = 401584A5196F9C4F002541A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4015852719707DD6002541A4 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = 4015852619707DD6002541A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4015852919707DD6002541A4 /* libReactiveCocoa-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libReactiveCocoa-iOS.a";
+			remoteRef = 4015852819707DD6002541A4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -657,6 +708,11 @@
 			isa = PBXTargetDependency;
 			name = Tidbits;
 			targetProxy = 401584A7196F9C76002541A4 /* PBXContainerItemProxy */;
+		};
+		4015852E19707DE1002541A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReactiveCocoa-iOS";
+			targetProxy = 4015852D19707DE1002541A4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -747,7 +803,6 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					CMDQueryStringSerialization,
-					"$(SRCROOT)/../ReactiveCocoa/ReactiveCocoaFramework/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -785,7 +840,6 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					CMDQueryStringSerialization,
-					"$(SRCROOT)/../ReactiveCocoa/ReactiveCocoaFramework/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
