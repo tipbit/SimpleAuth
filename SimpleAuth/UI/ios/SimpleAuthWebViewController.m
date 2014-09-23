@@ -23,6 +23,10 @@
 
 #pragma mark - UIViewController
 
+-(void)dealloc {
+    _webView.delegate = nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
