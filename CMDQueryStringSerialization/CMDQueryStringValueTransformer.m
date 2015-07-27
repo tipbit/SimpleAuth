@@ -40,7 +40,7 @@
 //    NSParameterAssert(class_conformsToProtocol(transformerClass, @protocol(CMDQueryStringValueTransformer)));
     id returnValue = [transformerClass stringWithKey:key value:value options:options];
     if (!returnValue) {
-        [NSException raise:NSInvalidArgumentException format:nil];
+        [NSException raise:NSInvalidArgumentException format:@""];
     }
     return returnValue;
 }

@@ -46,7 +46,7 @@
     
     // Be sure the key is a string
     if (![key isKindOfClass:[NSString class]]) {
-        [NSException raise:NSInvalidArgumentException format:nil];
+        [NSException raise:NSInvalidArgumentException format:@""];
     }
     key = [key cmd_stringByAddingEscapes];
     
