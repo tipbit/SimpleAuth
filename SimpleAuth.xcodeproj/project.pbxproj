@@ -100,6 +100,20 @@
 			remoteGlobalIDString = 88F440AA153DAC820097B4C3;
 			remoteInfo = "ReactiveCocoa-iOS";
 		};
+		40DD92D21B65BE7B00F6B8AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4015849A196F9C4F002541A4 /* Tidbits.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40E48B13198B25F30015C54E;
+			remoteInfo = Tidbits.framework;
+		};
+		40DD92D41B65BE7B00F6B8AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4015849A196F9C4F002541A4 /* Tidbits.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40A5D51D1A4B5892004A4EE3;
+			remoteInfo = TidbitsTestBase.framework;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -464,6 +478,8 @@
 				401584A2196F9C4F002541A4 /* libTidbits.a */,
 				401584A4196F9C4F002541A4 /* libTidbitsTestBase.a */,
 				401584A6196F9C4F002541A4 /* TidbitsTests.xctest */,
+				40DD92D31B65BE7B00F6B8AE /* Tidbits.framework */,
+				40DD92D51B65BE7B00F6B8AE /* TidbitsTestBase.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -569,7 +585,7 @@
 		3BB324FC182ABC8B00ACB555 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Byliner, Inc";
 			};
 			buildConfigurationList = 3BB324FF182ABC8B00ACB555 /* Build configuration list for PBXProject "SimpleAuth" */;
@@ -634,6 +650,20 @@
 			fileType = archive.ar;
 			path = "libReactiveCocoa-iOS.a";
 			remoteRef = 4015852819707DD6002541A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40DD92D31B65BE7B00F6B8AE /* Tidbits.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Tidbits.framework;
+			remoteRef = 40DD92D21B65BE7B00F6B8AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40DD92D51B65BE7B00F6B8AE /* TidbitsTestBase.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TidbitsTestBase.framework;
+			remoteRef = 40DD92D41B65BE7B00F6B8AE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -745,6 +775,7 @@
 					"-ObjC",
 					"-all_load",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.calebd.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -763,6 +794,7 @@
 					"-ObjC",
 					"-all_load",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.calebd.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -785,6 +817,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
